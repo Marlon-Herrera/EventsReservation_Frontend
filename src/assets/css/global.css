@@ -1,0 +1,276 @@
+/* Global styles for the application */
+
+:root {
+  /* Define variables */
+  --bg-hover: rgb(0, 235, 160);
+  --white: #fcfcfc;
+  --events: #ef3829;
+  --events-dark: #000000;
+  --events-white: #FFFFFF;
+}
+
+body {
+  font-family: "Aptos SemiBold", sans-serif !important;
+  background-color: var(--white);
+}
+
+.bg-events {
+  background-color: var(--events);
+}
+
+.bg-events-two {
+  background-color: var(--events-dark);
+}
+
+.text-events {
+  color: var(--events);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.btn-events {
+  border: 1px solid var(--events);
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--events);
+}
+
+.btn-events:hover {
+  border: 1px solid var(--events);
+  color: var(--events);
+  background-color: var(--white);
+}
+
+.btn-events-two {
+  border: 1px solid var(--events-dark);
+  color: var(--events-white);
+  font-weight: bold;
+  background-color: var(--events-dark);
+}
+
+.btn-events-two:hover {
+  border: 1px solid var(--events-dark);
+  color: var(--events-dark);
+  background-color: var(--events-white);
+}
+
+.nav-link.active button {
+  background-color: var(--white);
+  color: var(--events);
+}
+
+.dark-overlay {
+  position: relative;
+}
+
+.dark-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.form-control:focus {
+  border: 1px solid var(--events);
+}
+
+.spinner-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.spinner-content {
+  left: 50%;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.spinner-img {
+  animation: spin 1s linear infinite;
+  border-radius: 100%;
+  width: 60px;
+  color: white;
+}
+
+.is-invalid {
+  border-color: var(--events) !important; 
+  background-color: #f8d7da; 
+}
+.is-invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); 
+}
+.text-danger {
+  color: var(--events) !important; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* styles for checkboxes */
+
+input[type="checkbox"].form-check-input:checked {
+  background-color: var(--events);
+}
+
+input[type="checkbox"].form-check-input:not(:checked) {
+  background-color: var(--white);
+  border: 1px solid var(--events);
+}
+
+/* styles for login */
+
+.rounded-side{
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.sidenav{ 
+  height: calc(100vh - 143px);
+}
+
+@media (max-width: 767px) {
+  .rounded-side {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .login-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidenav{
+    height: 150px;
+  }
+}
+
+/* styles for users */
+
+table thead tr th {
+  background: var(--events) !important;
+  color: var(--white) !important;
+}
+
+@media (min-width: 1200px) {
+  .responsive-logo {
+    width: 348px;  
+    height: 429px;  
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .responsive-logo {
+    width: 250px;  
+    height: 300px;  
+  }
+}
+
+
+@media (max-width: 767px) {
+  .responsive-logo {
+    width: 150px;  
+    height: 180px;
+    margin: 10px;  
+  }
+}
+
+.btn-users { 
+  width: 200px;
+  padding: 15px;
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  z-index: 1;
+}
+
+@media (max-width: 1330px) and (min-width: 1050px) {
+  .btn-users {    
+    
+    bottom: 180px; 
+  }
+}
+
+@media (max-width: 1680px) and (min-width: 1330px) {
+  .btn-users {
+    bottom: 210px; 
+  }
+}
+
+@media (max-width: 2000px) and (min-width: 1680px) {
+  .btn-users {
+    bottom: 240px; 
+  }
+}
+
+@media (max-width: 2500px) and (min-width: 2000px) {
+  .btn-users {
+    bottom: 260px; 
+  }
+}
+
+
+.modal-dialog-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; 
+}
+
+
+.modal-content {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 1rem;
+  border: none;
+}
+
+
+.modal-body {
+  padding-top: 1rem;
+}
+
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: none;
+}
+
+.btn-custom-width {
+  width: auto;
+  max-width: 10000px; 
+  margin-right: auto; 
+}
+
+
+
+
